@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <title>Numan Ansari | Data Analyst | Python Developer Portfolio</title>
+
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        
+        
+        <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "secondary-container": "#6f00be",
+                "primary": "#c0c1ff",
+                "on-background": "#dae2fd",
+                "tertiary-fixed-dim": "#89ceff",
+                "secondary-fixed": "#f0dbff",
+                "primary-fixed-dim": "#c0c1ff",
+                "primary-fixed": "#e1e0ff",
+                "surface": "#0b1326",
+                "surface-container-highest": "#2d3449",
+                "on-primary-fixed-variant": "#2f2ebe",
+                "on-tertiary-fixed": "#001e2f",
+                "tertiary-container": "#009ada",
+                "surface-bright": "#31394d",
+                "surface-dim": "#0b1326",
+                "on-primary-container": "#0d0096",
+                "on-error": "#690005",
+                "error-container": "#93000a",
+                "surface-container": "#171f33",
+                "background": "#0b1326",
+                "on-surface": "#dae2fd",
+                "surface-container-low": "#131b2e",
+                "primary-container": "#8083ff",
+                "error": "#ffb4ab",
+                "on-secondary": "#490080",
+                "tertiary": "#89ceff",
+                "on-primary-fixed": "#07006c",
+                "on-error-container": "#ffdad6",
+                "surface-variant": "#2d3449",
+                "on-secondary-container": "#d6a9ff",
+                "inverse-primary": "#494bd6",
+                "surface-container-high": "#222a3d",
+                "on-tertiary-container": "#002d43",
+                "outline": "#908fa0",
+                "surface-container-lowest": "#060e20",
+                "on-secondary-fixed": "#2c0051",
+                "outline-variant": "#464554",
+                "inverse-surface": "#dae2fd",
+                "tertiary-fixed": "#c9e6ff",
+                "secondary-fixed-dim": "#ddb7ff",
+                "on-secondary-fixed-variant": "#6900b3",
+                "on-primary": "#1000a9",
+                "on-tertiary": "#00344d",
+                "on-tertiary-fixed-variant": "#004c6e",
+                "secondary": "#ddb7ff",
+                "inverse-on-surface": "#283044",
+                "surface-tint": "#c0c1ff",
+                "on-surface-variant": "#c7c4d7"
+              },
+              "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+              },
+              "spacing": {
+                "xl": "80px",
+                "lg": "48px",
+                "xs": "8px",
+                "gutter": "24px",
+                "md": "24px",
+                "container-max": "1200px",
+                "sm": "16px",
+                "base": "4px"
+              },
+              "fontFamily": {
+                "caption": ["Inter"],
+                "body-lg": ["Inter"],
+                "body-md": ["Inter"],
+                "h1": ["Space Grotesk"],
+                "h3": ["Space Grotesk"],
+                "h2": ["Space Grotesk"],
+                "label-caps": ["Space Grotesk"]
+              },
+              "fontSize": {
+                "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                "h1": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "h3": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                "h2": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "label-caps": ["14px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "500"}]
+              }
+            }
+          }
+        }
+        </script>
+        <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            transform: translateY(-8px) perspective(1000px) rotateX(2deg);
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(192, 193, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        .glow-button {
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+            transition: all 0.3s ease;
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.6);
+            transform: scale(1.02);
+        }
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #c0c1ff, #ddb7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        </style>
+
+</head>
+<body class="font-body-md selection:bg-primary-container selection:text-on-primary-container">
+  <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-950/60 backdrop-blur-lg border-b border-white/10 shadow-2xl">
+        <div class="max-w-[1200px] mx-auto flex justify-between items-center px-8 h-20 font-['Space_Grotesk'] antialiased">
+            <div class="text-xl font-bold tracking-tighter text-slate-50 dark:text-white">Numan Ansari</div>
+            <div class="hidden md:flex gap-8 items-center">
+                <a class="text-indigo-400 border-b-2 border-indigo-500 pb-1" href="index.html">Home</a>
+                <a class="text-slate-400 hover:text-slate-100 transition-colors duration-300" href="#about">About</a>
+                <a class="text-slate-400 hover:text-slate-100 transition-colors duration-300" href="#skills">Skills</a>
+                <a class="text-slate-400 hover:text-slate-100 transition-colors duration-300" href="#projects">Projects</a>
+                <a class="text-slate-400 hover:text-slate-100 transition-colors duration-300" href="#contact">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <!-- <span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors" data-icon="what's-app"></span>
+                <span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors" data-icon="database">database</span> -->
+                <button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-bold hover:bg-white/10 transition-all glow-button"><a href="images/Documents/Numan_Ansari_Resume_DA.pdf">Resume</a></button>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-20">
+    <!-- Hero Section -->
+    
+
+
+    <!-- Projects Gallery -->
+    <section class="py-xl px-8" id="projects">
+        <div class="max-w-[1200px] mx-auto">
+            <div class="flex justify-between items-end mb-16">
+                <div>
+                    <h2 class="font-h2 text-h2 mb-4">Microsoft Excel <span class="text-secondary">Dashboards</span></h2>
+                    <!-- <p class="text-on-surface-variant">A collection of engineering feats and data explorations.</p> -->
+                </div>
+            </div>
+
+                <!-- Dashboard Card 1 -->
+                <div class="glass-card p-4 rounded-[2rem]">
+                        <img alt="BI Dashboard" class="w-full h-100 object-cover rounded-2xl" data-alt="Modern business dashboard with minimalist charts and dark glassmorphic design elements" src="images/Project_images/Dashboard/Excel-Dashboards/Excel_Dashboard_Hr.jpeg"/>
+                        <div class="px-4 pb-4 text-center">
+                            <h4 class="font-h3 text-[24px] mb-3">HR Analytics | Employee Retention Dashboard</h4>
+                            <p class="text-body-md text-on-surface-variant mb-6 line-clamp-2">A comprehensive dashboard for visualizing and analyzing human resources data.</p>
+                            <div class="flex gap-2 justify-center flex-wrap">
+                                <span class="text-xs font-semibold bg-white/5 px-3 py-1 rounded-md text-secondary">Power BI</span>
+                                <span class="text-xs font-semibold bg-white/5 px-3 py-1 rounded-md text-secondary">HR Analytics</span>
+                                <span class="text-xs font-semibold bg-white/5 px-3 py-1 rounded-md text-secondary">Employee Retention</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section class="py-xl px-8" id="contact">
+        <div class="max-w-[1200px] mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-h2 text-h2 mb-4">Let's <span class="text-gradient">Connect</span></h2>
+                <p class="text-on-surface-variant">Ready to discuss your next technical challenge or data project.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="glass-card p-10 rounded-3xl">
+                <h3 class="font-h3 text-h3 mb-8">Send a Message</h3>
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-caption font-label-caps text-on-surface-variant mb-2">FULL NAME</label>
+                        <input class="w-full bg-surface-container-high border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 transition-all px-4 py-3 rounded-t-lg text-on-surface" placeholder="John Doe" type="text"/>
+                    </div>
+                    <div>
+                        <label class="block text-caption font-label-caps text-on-surface-variant mb-2">EMAIL ADDRESS</label>
+                        <input class="w-full bg-surface-container-high border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 transition-all px-4 py-3 rounded-t-lg text-on-surface" placeholder="john@example.com" type="email"/>
+                    </div>
+                    <div>
+                        <label class="block text-caption font-label-caps text-on-surface-variant mb-2">MESSAGE</label>
+                        <textarea class="w-full bg-surface-container-high border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 transition-all px-4 py-3 rounded-t-lg text-on-surface" placeholder="Describe your project..." rows="4"></textarea>
+                    </div>
+                        <button class="w-full bg-primary text-on-primary font-bold py-4 rounded-xl glow-button" type="submit">Send Message</button>
+                </form>
+            </div>
+            <div class="flex flex-col justify-between">
+                <div class="space-y-8">
+                    <div class="flex items-center gap-6 group">
+                        <div class="w-16 h-16 glass-card rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all">
+                            <span class="material-symbols-outlined" data-icon="mail">mail</span>
+                        </div>
+                    <div>
+                    <h4 class="font-label-caps text-on-surface-variant mb-1">EMAIL</h4>
+                    <p class="text-h5 font-h3 text-[20px]"><a href="mailto:na142901@gmail.com">na142901@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="flex items-center gap-6 group">
+                <div class="w-16 h-16 glass-card rounded-2xl flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-all">
+                    <span class="material-symbols-outlined" data-icon="call">call</span>
+                </div>
+                <div>
+                    <h4 class="font-label-caps text-on-surface-variant mb-1">PHONE</h4>
+                    <p class="text-h5 font-h3 text-[20px]"><a href="tel:7738803553">7738803553</a></p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="mt-12">
+            <h4 class="font-label-caps text-on-surface-variant mb-6">SOCIAL CHANNELS</h4>
+        <div class="flex gap-4">
+            <a class="w-14 h-14 glass-card rounded-xl flex items-center justify-center text-on-surface hover:text-primary hover:border-primary transition-all" href="#">
+            <span class="material-symbols-outlined" data-icon="language">language</span>
+            </a>
+            <a class="w-14 h-14 glass-card rounded-xl flex items-center justify-center text-on-surface hover:text-primary hover:border-primary transition-all" href="#">
+            <span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+            </a>
+            <a class="w-14 h-14 glass-card rounded-xl flex items-center justify-center text-on-surface hover:text-primary hover:border-primary transition-all" href="#">
+            <span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+            </a>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full py-12 border-t border-white/5 bg-slate-950 font-['Space_Grotesk'] text-sm tracking-wide">
+        <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center px-8 gap-4">
+            <div class="text-lg font-semibold text-slate-200">Numan Ansari</div>
+            <p class="text-slate-500">© 2024 Numan Ansari.</p>
+            <div class="flex gap-8">
+                <a class="text-slate-500 hover:text-indigo-300 transition-opacity duration-300 hover:underline decoration-indigo-500/50 underline-offset-4" href="#">LinkedIn</a>
+                <a class="text-slate-500 hover:text-indigo-300 transition-opacity duration-300 hover:underline decoration-indigo-500/50 underline-offset-4" href="#">GitHub</a>
+                <a class="text-slate-500 hover:text-indigo-300 transition-opacity duration-300 hover:underline decoration-indigo-500/50 underline-offset-4" href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
