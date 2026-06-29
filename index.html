@@ -14,6 +14,7 @@
         <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
+        <script src="https://unpkg.com/lucide@latest"></script>
         
         
         <script id="tailwind-config">
@@ -138,17 +139,80 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        #loader{
+        position:fixed;
+        inset:0;
+        background:#07101f;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        z-index:99999;
+        transition:all .8s ease;
+    }
+
+    .loader-content{
+        text-align:center;
+    }
+
+    .loader-ring{
+        width:80px;
+        height:80px;
+        border-radius:50%;
+        border:5px solid rgba(255,255,255,.15);
+        border-top:5px solid #7c6cfb;
+        margin:auto;
+        margin-bottom:25px;
+        animation:spin .9s linear infinite;
+        box-shadow:0 0 25px rgba(124,108,251,.45);
+    }
+
+    .loader-content h1{
+        color:#fff;
+        font-size:42px;
+        font-weight:700;
+    }
+
+    .loader-content span{
+        color:#7c6cfb;
+    }
+
+    .loader-content p{
+        margin-top:12px;
+        color:#a0a0a0;
+        letter-spacing:2px;
+    }
+
+    @keyframes spin{
+        to{
+            transform:rotate(360deg);
+        }
+    }
         </style>
 
 </head>
 <body class="font-body-md selection:bg-primary-container selection:text-on-primary-container">
-  <!-- TopNavBar -->
+    <div id="loader">
+    <div class="loader-content">
+        <div class="loader-ring"></div>
+
+        <h1>
+            Numan <span>Ansari</span>
+        </h1>
+
+        <p>Loading Portfolio...</p>
+    </div>
+</div>
+
+</div>
+    <!-- TopNavBar -->
     <nav class="fixed top-0 w-full z-50 bg-slate-950/60 backdrop-blur-lg border-b border-white/10 shadow-2xl">
         <div class="max-w-[1200px] mx-auto flex justify-between items-center px-8 h-20 font-['Space_Grotesk'] antialiased">
             <div class="text-xl font-bold tracking-tighter text-slate-50 dark:text-white">Numan Ansari</div>
             <div class="hidden md:flex gap-8 items-center">
                 <a class="text-indigo-400 border-b-2 border-indigo-500 pb-1" href="index.html">Home</a>
                 <a class="text-slate-400 hover:text-slate-100 transition-colors duration-300" href="#about">About</a>
+                <a class="text-slate-400 hover:text-slate-100 transition-colors duration-300" href="#education">Education</a>
                 <a class="text-slate-400 hover:text-slate-100 transition-colors duration-300" href="#skills">Skills</a>
                 <a class="text-slate-400 hover:text-slate-100 transition-colors duration-300" href="projects.html">Projects</a>
                 <a class="text-slate-400 hover:text-slate-100 transition-colors duration-300" href="#contact">Contact</a>
@@ -160,6 +224,7 @@
             </div>
         </div>
     </nav>
+  <!-- TopNavBar -->
     <main class="pt-20">
     <!-- Hero Section -->
     <section class="relative min-h-[921px] flex items-center overflow-hidden px-8" id="home">
@@ -172,12 +237,12 @@
                     <h1 class="font-h1 text-h1 mb-6 text-slate-50 leading-tight">
                         Hi,<br> I'm Numan<br/><span class="text-gradient">Ansari</span>
                     </h1>
-                    <span class="font-label-caps text-label-caps text-primary tracking-widest block mb-4">Data Analyst | Python Developer | BI Specialist</span>
-                <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-lg">Transforming data into insights, and ideas into scalable digital solutions.</p>
+                    <span class="font-label-caps text-label-caps text-primary tracking-widest block mb-4">Data Analyst | Python Developer | MCA Graduate</span>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-lg">Transforming data into meaningful insights through Python, SQL, Power BI, and Business Intelligence solutions.</p>
                 <div class="flex gap-4">
                 <button class="bg-primary-container text-on-primary-container font-bold px-8 py-4 rounded-xl flex items-center gap-2 glow-button"><a href="projects.html">Explore Projects <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span></a>
                 </button>
-                <button class="glass-card px-8 py-4 rounded-xl font-bold hover:bg-white/10"><a href="#contact">Get in Touch</a></button>
+                <button class="glass-card px-8 py-4 rounded-xl font-bold hover:bg-white/10 flex-wrap text-center"><a href="#contact">Get in Touch</a></button>
             </div>
         </div>
         <div class="relative group">
@@ -196,37 +261,252 @@
                 <div class="md:col-span-2">
                     <h2 class="font-h2 text-h2 mb-6">Technical <span class="text-tertiary">Precision</span></h2>
                     <p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
-                                            I am a <strong>Data Analyst and Python Developer</strong> with a strong foundation in analytics, software development, and digital solutions. With a background in <strong>MCA (AI/ML)</strong>, I specialize in extracting insights from data and building data-driven applications.
+                        I am an <strong>MCA graduate (AI/ML) passionate about Data Analytics, Python development, and Business Intelligence.</strong> Currently pursuing the Data Analyst program from ExcelR and preparing for the <strong>IIT Jammu NASSCOM examination.</strong>
 
-                    Beyond analytics, I bring experience in <strong>UI/UX design, digital marketing, and branding,</strong> which allows me to understand both the technical and business side of projects. I have worked on real-world applications involving dashboards, automation, APIs, and business analytics.
+                        My expertise includes<strong> Python, SQL, Power BI, Tableau, and data visualization.</strong> I enjoy transforming complex data into meaningful insights and building intelligent solutions.
 
+                        Apart from technology, I am a <strong>National Swimming Champion and record holder</strong>, which has taught me discipline, dedication, and consistency.
 
+                        I am actively seeking opportunities as a <strong>Data Analyst, Business Intelligence Analyst, or Python Developer.</strong>
                                             </p>
                     <p class="font-body-md text-body-md text-on-surface-variant/80">
                                                 My goal is to build intelligent, scalable, and user-focused solutions that solve real-world problems using data and technology.
                                             </p>
                 </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="glass-card p-6 rounded-2xl text-center">
-                        <span class="block text-h3 font-h3 text-primary">5+</span>
+                <div class="grid grid-cols-2 gap-4 flex-wrap">
+                    <div class="glass-card p-6 rounded-2xl text-center flex-wrap">
+                        <span class="block text-h3 font-h3 text-primary">4+</span>
                         <span class="text-caption font-caption text-on-surface-variant uppercase tracking-wider">Years Experience</span>
                     </div>
-                    <div class="glass-card p-6 rounded-2xl text-center">
-                        <span class="block text-h3 font-h3 text-secondary">40+</span>
+                    <div class="glass-card p-6 rounded-2xl text-center flex-wrap">
+                        <span class="block text-h3 font-h3 text-primary">15+</span>
                         <span class="text-caption font-caption text-on-surface-variant uppercase tracking-wider">Projects Completed</span>
                     </div>
-                    <div class="glass-card p-6 rounded-2xl text-center">
-                        <span class="block text-h3 font-h3 text-tertiary">15+</span>
-                        <span class="text-caption font-caption text-on-surface-variant uppercase tracking-wider">Global Clients</span>
+                    <div class="glass-card p-6 rounded-2xl text-center flex-wrap">
+                        <span class="block text-h3 font-h3 text-secondary">10+</span>
+                        <span class="text-caption font-caption text-on-surface-variant uppercase tracking-wider">Certificates & Achievements</span>
                     </div>
-                    <div class="glass-card p-6 rounded-2xl text-center">
-                        <span class="block text-h3 font-h3 text-primary-fixed">100%</span>
+                    <div class="glass-card p-6 rounded-2xl text-center flex-wrap">
+                        <span class="block text-h3 font-h3 text-secondary">1+</span>
+                        <span class="text-caption font-caption text-on-surface-variant uppercase tracking-wider">National Awards</span>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl text-center flex-wrap">
+                        <span class="block text-h3 font-h3 text-tertiary">15+</span>
+                        <span class="text-caption font-caption text-on-surface-variant uppercase tracking-wider">Technical Skills</span>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl text-center flex-wrap">
+                        <span class="block text-h3 font-h3 text-tertiary">100%</span>
                         <span class="text-caption font-caption text-on-surface-variant uppercase tracking-wider">Success Rate</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+    <!-- Education Section -->
+<section id="education" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-bold">
+        Educational <span class="text-tertiary">Journey</span>
+      </h2>
+
+      <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+        Building a strong academic foundation in commerce, computer applications,
+        artificial intelligence, and data analytics through continuous learning.
+      </p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="relative">
+
+      <!-- Vertical Line -->
+      <div
+        class="absolute left-1/2 top-0 h-full w-1 bg-gradient-to-b from-tertiary via-cyan-400 to-tertiary -translate-x-1/2 hidden md:block">
+      </div>
+
+      <!-- ================= BMS ================= -->
+      <div class="mb-16 flex flex-col md:flex-row items-center">
+
+        <div class="md:w-1/2 md:pr-12">
+          <div
+            class="glass-card p-6 rounded-3xl border border-white/10 hover:scale-105 transition duration-300">
+            <span class="text-tertiary font-semibold">2018 - 2020</span>
+
+            <h3 class="text-2xl font-bold mt-2">
+              Bachelor of Management Studies (BMS)
+            </h3>
+
+            <h4 class="text-gray-400 mb-3">
+              University of Mumbai
+            </h4>
+
+            <p class="text-gray-300">
+              Built a strong foundation in commerce, accounting, finance,
+              business operations, and analytical thinking. This background
+              strengthened my problem-solving approach before transitioning
+              into the field of Data Analytics.
+            </p>
+          </div>
+        </div>
+
+        <!-- Dot -->
+        <div
+          class="hidden md:flex w-6 h-6 rounded-full bg-tertiary shadow-[0_0_20px_#38bdf8] z-10">
+        </div>
+
+        <div class="md:w-1/2"></div>
+
+      </div>
+
+      <!-- ================= MCA ================= -->
+
+      <div class="mb-16 flex flex-col md:flex-row items-center">
+
+        <div class="md:w-1/2"></div>
+
+        <div
+          class="hidden md:flex w-6 h-6 rounded-full bg-tertiary shadow-[0_0_20px_#38bdf8] z-10">
+        </div>
+
+        <div class="md:w-1/2 md:pl-12">
+
+          <div
+            class="glass-card p-6 rounded-3xl border border-white/10 hover:scale-105 transition duration-300">
+
+            <span class="text-tertiary font-semibold">
+              2023 - 2025
+            </span>
+
+            <h3 class="text-2xl font-bold mt-2">
+              Master of Computer Applications (AI & ML Specialization)
+            </h3>
+
+            <h4 class="text-gray-400 mb-3">
+               Amity University
+            </h4>
+
+            <p class="text-gray-300">
+              Successfully completed MCA with specialization in AI & ML.
+              Worked on projects involving Python, Machine Learning,
+              SQL, Data Structures, Software Engineering,
+              and Intelligent Systems.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ================= ExcelR ================= -->
+
+      <div class="mb-16 flex flex-col md:flex-row items-center">
+
+        <div class="md:w-1/2 md:pr-12">
+
+          <div
+            class="glass-card p-6 rounded-3xl border border-white/10 hover:scale-105 transition duration-300">
+
+            <span class="text-tertiary font-semibold">
+              2026 - Present
+            </span>
+
+            <h3 class="text-2xl font-bold mt-2">
+              Data Analytics Program
+            </h3>
+
+            <h4 class="text-gray-400 mb-3">
+              ExcelR
+            </h4>
+
+            <p class="text-gray-300 mb-4">
+              Currently strengthening practical industry skills through
+              hands-on projects and business case studies.
+            </p>
+
+            <div class="flex flex-wrap gap-2">
+
+              <span class="px-3 py-1 rounded-full bg-tertiary/20 text-tertiary">
+                Python
+              </span>
+
+              <span class="px-3 py-1 rounded-full bg-tertiary/20 text-tertiary">
+                SQL
+              </span>
+
+              <span class="px-3 py-1 rounded-full bg-tertiary/20 text-tertiary">
+                Power BI
+              </span>
+
+              <span class="px-3 py-1 rounded-full bg-tertiary/20 text-tertiary">
+                Tableau
+              </span>
+
+              <span class="px-3 py-1 rounded-full bg-tertiary/20 text-tertiary">
+                Excel
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div
+          class="hidden md:flex w-6 h-6 rounded-full bg-tertiary shadow-[0_0_20px_#38bdf8] z-10">
+        </div>
+
+        <div class="md:w-1/2"></div>
+
+      </div>
+
+      <!-- ================= IIT JAMMU ================= -->
+
+      <div class="flex flex-col md:flex-row items-center">
+
+        <div class="md:w-1/2"></div>
+
+        <div
+          class="hidden md:flex w-6 h-6 rounded-full bg-tertiary shadow-[0_0_20px_#38bdf8] z-10">
+        </div>
+
+        <div class="md:w-1/2 md:pl-12">
+
+          <div
+            class="glass-card p-6 rounded-3xl border border-white/10 hover:scale-105 transition duration-300">
+
+            <span class="text-tertiary font-semibold">
+              In Progress
+            </span>
+
+            <h3 class="text-2xl font-bold mt-2">
+              IIT Jammu × NASSCOM
+            </h3>
+
+            <h4 class="text-gray-400 mb-3">
+              Data Analytics Certification
+            </h4>
+
+            <p class="text-gray-300">
+              Preparing for the IIT Jammu & NASSCOM certification to
+              enhance expertise in Data Analytics, Business Intelligence,
+              Problem Solving, and Industry Best Practices.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
 
     <!-- Skills Section -->
@@ -342,7 +622,7 @@
                                     <li>Built Flask-based backend</li>
                                 </ul>
                             </div> -->
-                            <div class="flex gap-2">
+                            <div class="flex gap-2 flex-wrap">
                                 <span class="text-xs font-semibold bg-white/5 px-3 py-1 rounded-md text-primary">Python</span>
                                 <span class="text-xs font-semibold bg-white/5 px-3 py-1 rounded-md text-primary">Flask</span>
                                 <span class="text-xs font-semibold bg-white/5 px-3 py-1 rounded-md text-primary">Pandas</span>
@@ -357,7 +637,7 @@
                     <div class="px-4 pb-4">
                         <h4 class="font-h3 text-[24px] mb-3">Business Intelligence Dashboard</h4>
                         <p class="text-body-md text-on-surface-variant mb-6 line-clamp-2">Designed interactive dashboards to analyze business and customer data for better decision-making.</p>
-                        <div class="flex gap-2">
+                        <div class="flex gap-2 flex-wrap">
                             <span class="text-xs font-semibold bg-white/5 px-3 py-1 rounded-md text-secondary">Power BI</span>
                             <span class="text-xs font-semibold bg-white/5 px-3 py-1 rounded-md text-secondary">Tableau</span>
                             <span class="text-xs font-semibold bg-white/5 px-3 py-1 rounded-md text-secondary">Excel</span>
@@ -373,7 +653,7 @@
                         <div class="px-4 pb-4">
                             <h4 class="font-h3 text-[24px] mb-3">Event Management & Payment Analytics</h4>
                             <p class="text-body-md text-on-surface-variant mb-6 line-clamp-2">Developed a system to manage bookings and track financial transactions with analytics.</p>
-                            <div class="flex gap-2">
+                            <div class="flex gap-2 flex-wrap">
                                 <span class="text-xs font-semibold bg-white/5 px-3 py-1 rounded-md text-tertiary">Python</span>
                                 <span class="text-xs font-semibold bg-white/5 px-3 py-1 rounded-md text-tertiary">SQL</span>
                                 <span class="text-xs font-semibold bg-white/5 px-3 py-1 rounded-md text-tertiary">APIs</span>
@@ -387,7 +667,7 @@
                         <div class="px-4 pb-4">
                             <h4 class="font-h3 text-[24px] mb-3">Freelance Projects | Websites & Marketing</h4>
                             <p class="text-body-md text-on-surface-variant mb-6 line-clamp-2">Worked on multiple web and analytics projects involving data handling, dashboards, and integrations.</p>
-                            <div class="flex gap-2">
+                            <div class="flex gap-2 flex-wrap">
                                 <span class="text-xs font-semibold bg-white/5 px-3 py-1 rounded-md text-primary">HTML5</span>
                                 <span class="text-xs font-semibold bg-white/5 px-3 py-1 rounded-md text-primary">CSS3</span>
                                 <span class="text-xs font-semibold bg-white/5 px-3 py-1 rounded-md text-primary">JavaScript</span>
@@ -403,7 +683,7 @@
                         <div class="px-4 pb-4">
                             <h4 class="font-h3 text-[24px] mb-3">Data Analysis & Visualization</h4>
                             <p class="text-body-md text-on-surface-variant mb-6 line-clamp-2">I specialize in converting raw data into actionable insights using visualization and analytics tools.</p>
-                            <div class="flex gap-2">
+                            <div class="flex gap-2 flex-wrap">
                                 <span class="text-xs font-semibold bg-white/5 px-3 py-1 rounded-md text-secondary">Python</span>
                                 <span class="text-xs font-semibold bg-white/5 px-3 py-1 rounded-md text-secondary">SQL</span>
                                 <span class="text-xs font-semibold bg-white/5 px-3 py-1 rounded-md text-secondary">Power BI</span>
@@ -419,7 +699,7 @@
                         <div class="px-4 pb-4">
                             <h4 class="font-h3 text-[24px] mb-3">Design | User Experience & Digital Strategy</h4>
                             <p class="text-body-md text-on-surface-variant mb-6 line-clamp-2">I also bring creative and marketing expertise which helps bridge the gap between data, design, and business.</p>
-                            <div class="flex gap-2">
+                            <div class="flex gap-2 flex-wrap">
                                 <span class="text-xs font-semibold bg-white/5 px-3 py-1 rounded-md text-tertiary">Digital Marketing</span>
                                 <span class="text-xs font-semibold bg-white/5 px-3 py-1 rounded-md text-tertiary">UI/UX Design</span>
                                 <span class="text-xs font-semibold bg-white/5 px-3 py-1 rounded-md text-tertiary">Figma | Photoshop</span>
@@ -432,6 +712,140 @@
             </div>
         </div>
     </section>
+
+
+
+    <!-- ================= CERTIFICATIONS SECTION ================= -->
+<section id="certifications" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+
+        <!-- Heading -->
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-bold">
+                My <span class="text-tertiary">Certifications</span>
+            </h2>
+
+            <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+                Continuously enhancing my skills through professional certifications,
+                industry-recognized programs, and hands-on learning experiences.
+            </p>
+        </div>
+
+        <!-- Cards -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- ExcelR -->
+            <div class="glass-card rounded-3xl p-8 border border-white/10 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(56,189,248,0.25)] transition-all duration-300">
+
+                <div class="text-5xl mb-5">📊</div>
+
+                <span class="inline-block px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300 text-sm font-medium mb-4">
+                    Pursuing
+                </span>
+
+                <h3 class="text-2xl font-bold mb-2">
+                    Data Analytics Program
+                </h3>
+
+                <h4 class="text-tertiary font-semibold mb-4">
+                    ExcelR
+                </h4>
+
+                <p class="text-gray-400 mb-6">
+                    Industry-oriented training covering Python, SQL, Power BI,
+                    Tableau, Excel, Statistics, Data Cleaning, Data Visualization,
+                    and Business Analytics.
+                </p>
+
+                <div class="flex flex-wrap gap-2">
+
+                    <span class="px-3 py-1 rounded-full bg-tertiary/20 text-tertiary text-sm">Python</span>
+
+                    <span class="px-3 py-1 rounded-full bg-tertiary/20 text-tertiary text-sm">SQL</span>
+
+                    <span class="px-3 py-1 rounded-full bg-tertiary/20 text-tertiary text-sm">Power BI</span>
+
+                    <span class="px-3 py-1 rounded-full bg-tertiary/20 text-tertiary text-sm">Tableau</span>
+
+                </div>
+
+            </div>
+
+            <!-- IIT Jammu -->
+            <div class="glass-card rounded-3xl p-8 border border-white/10 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(56,189,248,0.25)] transition-all duration-300">
+
+                <div class="text-5xl mb-5">🎓</div>
+
+                <span class="inline-block px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium mb-4">
+                    Preparing
+                </span>
+
+                <h3 class="text-2xl font-bold mb-2">
+                    Data Analytics Certification
+                </h3>
+
+                <h4 class="text-tertiary font-semibold mb-4">
+                    IIT Jammu × NASSCOM
+                </h4>
+
+                <p class="text-gray-400 mb-6">
+                    Preparing for the IIT Jammu and NASSCOM certification focused on
+                    Data Analytics, Business Intelligence, Problem Solving,
+                    and industry best practices.
+                </p>
+
+                <div class="flex flex-wrap gap-2">
+
+                    <span class="px-3 py-1 rounded-full bg-tertiary/20 text-tertiary text-sm">Analytics</span>
+
+                    <span class="px-3 py-1 rounded-full bg-tertiary/20 text-tertiary text-sm">BI</span>
+
+                    <span class="px-3 py-1 rounded-full bg-tertiary/20 text-tertiary text-sm">Industry Ready</span>
+
+                </div>
+
+            </div>
+
+            <!-- MCA -->
+            <div class="glass-card rounded-3xl p-8 border border-white/10 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(56,189,248,0.25)] transition-all duration-300">
+
+                <div class="text-5xl mb-5">💻</div>
+
+                <span class="inline-block px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-sm font-medium mb-4">
+                    Completed
+                </span>
+
+                <h3 class="text-2xl font-bold mb-2">
+                    MCA (AI & ML)
+                </h3>
+
+                <h4 class="text-tertiary font-semibold mb-4">
+                    Artificial Intelligence & Machine Learning
+                </h4>
+
+                <p class="text-gray-400 mb-6">
+                    Successfully completed my Master's in Computer Applications
+                    with specialization in Artificial Intelligence and Machine Learning,
+                    gaining practical experience in Python, Machine Learning,
+                    Databases, and Software Development.
+                </p>
+
+                <div class="flex flex-wrap gap-2">
+
+                    <span class="px-3 py-1 rounded-full bg-tertiary/20 text-tertiary text-sm">AI</span>
+
+                    <span class="px-3 py-1 rounded-full bg-tertiary/20 text-tertiary text-sm">ML</span>
+
+                    <span class="px-3 py-1 rounded-full bg-tertiary/20 text-tertiary text-sm">Python</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
 
 
     <!-- Data Analytics Portfolio (Special Section) -->
@@ -552,4 +966,5 @@
         </div>
     </footer>
 </body>
+<script src="script.js" defer></script>
 </html>
